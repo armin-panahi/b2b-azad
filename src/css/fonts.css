@@ -1,0 +1,13 @@
+/* FONT'S */
+
+
+
+@font-face {
+    font-family: 'IRANSansWeb';
+    src: url('./Assets/Fonts/woff/IRANSansX-Medium.woff')
+    format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
