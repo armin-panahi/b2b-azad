@@ -536,6 +536,7 @@ nav {
     padding: 0 16px;
     border-radius: 0 0 8px 8px;
     background-color: #03045E;
+    border: 1px solid black;
 }
 
 #all_category {
