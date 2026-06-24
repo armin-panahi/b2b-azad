@@ -4,1290 +4,1217 @@
 -->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>بی تو بی آزاد</title>
-    <!--* FAV ICON -->
-    <link rel="shortcut icon" type="image/png" href="./assets/images/b2b-azad-logo.png"/>
-    <!--* NORMALIZE CSS -->
-    <link rel="stylesheet" href="./src/css/normalize.css"/>
-    <!--* FONTS CSS -->
-    <link rel="stylesheet" href="./src/css/fonts.css"/>
-    <!--* FONTAWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
-    <!--* CSS SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <!--* JS SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!--* STYLE CSS -->
-    <link rel="stylesheet" href="./src/css/style.css"/>
-  </head>
-  <body>
-    
-    <header>
-      <div class="container">
-        <div id="header_container">
-          <div id="header_up">
-            <div id="header_logo">
-              <a href="#">
-                <img src="./assets/images/b2b-azad-logo.png" alt="B2B AZAD LOGO" />
-              </a>
-            </div>
 
-            <div id="search_frame">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="search"
-                name=""
-                id="search_input"
-                placeholder="جستجو ..."
-              />
-              <button type="button" class="open-btn" id="openPopupBtn">
-                <a href="#">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <span> انتخاب استان </span>
-                </a>
-              </button>
-            </div>
-            <!-- پاپ‌آپ -->
-            <div class="popup" id="popup">
-  <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-    <div class="popup-header">
-      <div>
-        <div class="title" id="popupTitle">انتخاب استان</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بی تو بی آزاد</title>
+  <!--* FAV ICON -->
+  <link rel="shortcut icon" type="image/png" href="./assets/images/b2b-azad-logo.png" />
+  <!--* NORMALIZE CSS -->
+  <link rel="stylesheet" href="./src/css/normalize.css" />
+  <!--* FONTS CSS -->
+  <link rel="stylesheet" href="./src/css/fonts.css" />
+  <!--* FONTAWESOME -->
+  <link rel="stylesheet" href="./src/css/all.css">
+  <!--* CSS SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!--* JS SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--* STYLE CSS -->
+  <link rel="stylesheet" href="./src/css/style.css" />
+</head>
 
-        <!-- ناحیه تگ‌ها و حذف همه -->
-        <div class="selected-tags" id="selectedTagsContainer">
-          <!-- تگ‌ها اینجا اضافه میشن -->
-        </div>
-      </div>
+<body>
 
-      <div class="right-controls">
-        <button class="remove-all" id="removeAllBtn">حذف همه</button>
-      </div>
-    </div>
-
-    <!-- سرچ -->
-    <div class="search-wrap">
-      <div class="search-input" aria-hidden="false">
-        <input type="text" id="searchInput" placeholder="استان را وارد کنید" aria-label="جستجوی استان">
-      </div>
-    </div>
-
-    <!-- بدنه شامل لیست استان‌ها -->
-    <div class="popup-body">
-      <div class="province-list" id="provinceList" tabindex="0" aria-label="لیست استان‌ها">
-        <!-- آیتم‌ها توسط جاوااسکریپت رندر میشن -->
-      </div>
-    </div>
-
-    <!-- فوتر -->
-    <div class="popup-footer">
-      <button class="btn cancel" id="cancelBtn">انصراف</button>
-      <button class="btn confirm" id="confirmBtn">تایید</button>
-    </div>
-  </div>
-            </div>
-
-            <div id="registerandlogin_button">
-              <button type="button">
-                <a href="#">
-                  <i class="fa-regular fa-user"></i>
-                  <span>ورود / ثبت نام</span>
-                </a>
-              </button>
-            </div>
+  <header>
+    <div class="container">
+      <div id="header_container">
+        <div id="header_up">
+          <div id="header_logo">
+            <a href="#">
+              <img src="./assets/images/b2b-azad-logo.png" alt="B2B AZAD LOGO" />
+            </a>
           </div>
 
-          <nav>
-            <div id="all_category" class="all_category">
+          <div id="search_frame">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="search_input" placeholder="جستجو ..." />
+            <button type="button" class="open-btn" id="openPopupBtn">
               <a href="#">
-                <i class="fa-solid fa-bars"></i>
-                <span>همه دسته بندی ها</span>
-              </a>
-
-              <div id="mega_menu">
-                <div id="mega_menu_upper">
-                  <div class="buttons_frame">
-                    <button type="button">
-                      <a href="#">
-                        <i class="fa-regular fa-boxes-stacked"></i>
-                        <h6>محصولات</h6>
-                      </a>
-                    </button>
-
-                    <button type="button">
-                      <a href="#">
-                        <i class="fa-regular fa-screwdriver-wrench"></i>
-                        <h6>خدمات</h6>
-                      </a>
-                    </button>
-
-                    <button type="button">
-                      <a href="#">
-                        <i class="fa-regular fa-file-lines"></i>
-                        <h6>استخدام</h6>
-                      </a>
-                    </button>
-
-                    <button type="button">
-                      <a href="#">
-                        <i class="fa-solid fa-list-ul"></i>
-                        <h6>متفرقه</h6>
-                      </a>
-                    </button>
-                  </div>
-                </div>
-
-                <hr />
-
-                <div id="mega_menu_down">
-                  <ul class="inside_menu">
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کالاهای صنعتی و شیمیایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa-solid fa-leaf"></i>
-                          <span>کشاورزی و مواد غذایی</span>
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </a>
-                    </li>
-                  </ul>
-
-                  <div class="hovered_menu">
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-                    
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-                    
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-                    
-                    <div class="hovered_menu_items">
-                      <i class="fa-solid fa-wheat"></i>
-                      <span>غلات</span>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ul id="main_menu">
-              <li>
-                <a href="#">
-                  <span>صفحه اصلی</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  <span>درباره ما</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>ارتباط با ما</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>اخبار و مقالات</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </a>
-              </li>
-            </ul>
-
-            <button type="button" class="create_adv_button">
-              <a href="#">
-                <i class="fa-solid fa-plus"></i>
-                <span>ثبت آگهی رایگان</span>
+                <i class="fa-solid fa-location-dot"></i>
+                <span> انتخاب استان </span>
               </a>
             </button>
-          </nav>
-        </div>
-      </div>
-    </header>
+          </div>
+          <!-- پاپ‌آپ -->
+          <div class="popup" id="popup">
+            <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+              <div class="popup-header">
+                <div>
+                  <div class="title" id="popupTitle">انتخاب استان</div>
 
-    <main>
+                  <!-- ناحیه تگ‌ها و حذف همه -->
+                  <div class="selected-tags" id="selectedTagsContainer">
+                    <!-- تگ‌ها اینجا اضافه میشن -->
+                  </div>
+                </div>
 
-      <div class="container">
+                <div class="right-controls">
+                  <button class="remove-all" id="removeAllBtn">حذف همه</button>
+                </div>
+              </div>
 
-        <!-- START ABOUT US -->
-        <div id="aboutus">
-          <div id="aboutus_texts">
-            <h1>
-              بی‌تو‌بی‌آزاد،
-              <span>مسیر سریع تجارت</span>
-            </h1>
-            <h2>
-              بدون واسطه، سریع و مطمئن آگهی بده و<br />
-              معامله کن.
-            </h2>
-            <h3>
-              صادرکننده‌ای؟ واردکننده؟ شرکت حمل‌ونقل یا تامین‌کننده؟<br />
-              اینجا همه به هم می‌رسن.
-            </h3>
-            <h4>تجارت از تأمین تا تحویل، همه‌چیز تو یه جا.</h4>
+              <!-- سرچ -->
+              <div class="search-wrap">
+                <div class="search-input" aria-hidden="false">
+                  <input type="text" id="searchInput" placeholder="استان را وارد کنید" aria-label="جستجوی استان">
+                </div>
+              </div>
 
-            <div id="aboutus_under_texts">
-              <h4>همین حالا آگهی تو ثبت کن!</h4>
-              <button type="button" class="create_adv_button">
-                <a href="#">
-                  <i class="fa-solid fa-plus"></i>
-                  <span>ثبت آگهی</span>
-                </a>
-              </button>
+              <!-- بدنه شامل لیست استان‌ها -->
+              <div class="popup-body">
+                <div class="province-list" id="provinceList" tabindex="0" aria-label="لیست استان‌ها">
+                  <!-- آیتم‌ها توسط جاوااسکریپت رندر میشن -->
+                </div>
+              </div>
+
+              <!-- فوتر -->
+              <div class="popup-footer">
+                <button class="btn cancel" id="cancelBtn">انصراف</button>
+                <button class="btn confirm" id="confirmBtn">تایید</button>
+              </div>
             </div>
           </div>
 
-          <div id="aboutus_pic">
-            <div id="aboutus_pic_frame">
-              <img src="./assets/images/about-us-poster.jpg" alt="ABOUT US" />
-              <div id="aboutus_pic_borderframe"></div>
-            </div>
-          </div>
-        </div>
-        <!-- END ABOUT US -->
-
-        <br /><br />  <!-- JUST FOR SPACE -->
-
-        <!-- START SPECIAL ADS -->
-        <div id="special_ads" class="swiper mySwiper">
-          <div class="div_titles special_ads">
-            <img
-              src="./assets/images/orange-vector-left.png"
-              alt="VECTOR LEFT"
-            />
-            <h6>آگهی های ویژه</h6>
-            <img
-              src="./assets/images/orange-vector-right.png"
-              alt="VECTOR RIGHT"
-            />
-          </div>
-
-          <div id="special_products" class="swiper-wrapper">
-
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./assets/images/product-1.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./assets/images/in-offer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./assets/images/product-2.jpg"
-                      alt="PRODUCT 2 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره دو</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./assets/images/in-offer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/Products/Product 3.jpg"
-                      alt="PRODUCT 3 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره سه</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            
-            </div>
-
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/Products/Product 4.jpg"
-                      alt="PRODUCT 4 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره چهار</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            
-            </div>
-            
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/Products/FaceWash.jfif"
-                      alt="PRODUCT 6 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame ">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره پنج</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            
-            </div>
-
-            <div class="spec_product swiper-slide">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/Products/Iphone16.jfif"
-                      alt="PRODUCT 7 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره پنج</h4>
-                  </div>
-
-                  <div class="product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                    <div class="inoffer_frame">
-                      <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            
-            </div>
-
-          </div>
-          
-          <div class="swiper-button-prev">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-
-        </div>
-        <!-- END SPECIAL ADS -->
-
-        <br /><br />  <!-- JUST FOR SPACE -->
-
-        <!-- START SEE ADS CATEGORY -->
-        <div id="see_ads_category">
-          <!-- START TITLE -->
-          <div class="div_titles see_ads_category_title">
-            <img
-              src="./Assets/Pictures/Blue Vector Right.png"
-              alt="BLUE VECTOR RIGHT"
-            />
-            <h6>دیدن آگهی بر اساس دسته بندی</h6>
-            <img
-              src="./Assets/Pictures/Blue Vector Left.png"
-              alt="BLUE VECTOR LEFT"
-            />
-          </div>
-          <!-- END TITLE -->
-
-          <!-- START CATEGORIES -->
-          <div id="ads_category">
-            <div class="category">
-              <a href="#">
-                <div class="category_pic">
-                  <!-- <i class="fa-solid fa-boxes-stacked"></i> -->
-                  <i class="fa-regular fa-boxes-stacked"></i>
-                </div>
-
-                <h6>محصولات</h6>
-              </a>
-            </div>
-
-            <div class="category">
-              <a href="#">
-                <div class="category_pic">
-                  <i class="fa-regular fa-screwdriver-wrench"></i>
-                </div>
-                <h6>خدمات</h6>
-              </a>
-            </div>
-
-            <div class="category">
-              <a href="#">
-                <div class="category_pic">
-                  <i class="fa-regular fa-file-lines"></i>
-                </div>
-
-                <h6>استخدام</h6>
-              </a>
-            </div>
-
-            <div class="category">
-              <a href="#">
-                <div class="category_pic">
-                  <i class="fa-solid fa-list-ul"></i>
-                </div>
-
-                <h6>متفرقه</h6>
-              </a>
-            </div>
-          </div>
-          <!-- END CATEGORIES -->
-
-        </div>
-        <!-- END SEE ADS CATEGORY -->
-
-        <br /><br />  <!-- JUST FOR SPACE -->
-
-        <!-- START TRANSPORTATION -->
-        <div id="transportation">
-
-          <!-- START TRANSPORTATION CONTENT -->
-          <div class="transportation_content">
-
-            <h4>
-              آگهی حمل و نقلت رو همین جا<br />
-              ثبت کن!
-            </h4>
-
-            <button type="button" class="create_adv_button">
-
-              <a href="#">
-
-                <i class="fa-solid fa-plus"></i>
-                <span>ثبت آگهی رایگان</span>
-
-              </a>
-
-            </button>
-
-          </div>
-          <!-- END TRANSPORTATION CONTENT -->
-
-        </div>
-        <!-- END TRANSPORTATION -->
-
-        <br/><br/> <!-- JUST FOR SPACE -->
-
-        <!-- START ALL ADS -->
-        <div id="all_ads">
-
-          <!-- START HEADER OF ALL ADS -->
-          <div id="all_ads_header">
-            
-            <img src="./Assets/Pictures/Blue Vector Right.png" alt="Blue Vector Right">
-            <h4 class="">همه آگهی ها</h4>
-            <img src="./Assets/Pictures/Blue Vector Left.png" alt="Blue Vector Left">
-            
-          </div>
-          <!-- END HEADER OF ALL ADS -->
-          
-          <!-- START MAIN OF ALL ADS -->
-          <div id="all_ads_main">
-
-            <!-- ROW 1 -->
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 1.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-            
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 2.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 3.png"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-            
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 4.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- ROW 2 -->
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 5.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-            
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 6.png"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 7.png"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 8.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- ROW 3 -->
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 9.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-            
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 10.png"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Product 11.jpg"
-                      alt="PRODUCT 1 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="spec_product all_ads_products">
-
-              <div class="base_product">
-
-                <div class="product_pic_holder">
-                  <div class="product_pic_frame all_ads_product_pic_frame">
-                    <img
-                      src="./Assets/Pictures/All Ads/Iphone16.jfif"
-                      alt="PRODUCT 12 PICTURE"
-                    />
-                  </div>
-
-                  <div class="add_to_fav_frame">                
-                      <i class="add_to_fav fa-regular fa-heart"></i>
-                  </div>
-
-                </div>
-
-                <div class="product_texts_frame">
-
-                  <div class="product_name">
-                    <h4>محصول شماره یک</h4>
-                  </div>
-
-                  <div class="product_properties all_ads_product_properties">
-                    <div class="product_price">
-                      <span>1,234,000</span>
-                      <span>تومان</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-          <!-- END MAIN OF ALL ADS -->
-          
-          <!-- START FOOTER OF ALL ADS -->
-          <div id="all_ads_footer">
-            
+          <div id="registerandlogin_button">
             <button type="button">
-              <span>مشاهده همه</span>
-              <i class="fa-solid fa-arrow-left"></i>
+              <a href="#">
+                <i class="fa-solid fa-user"></i>
+                <span>ورود / ثبت نام</span>
+              </a>
             </button>
-
           </div>
-          <!-- END FOOTER OF ALL ADS -->
-
         </div>
-        <!-- END ALL ADS -->
 
-        <br/><br/> <!-- JUST FOR SPACE -->
+        <nav>
+          <div id="all_category" class="all_category">
+            <a href="#">
+              <i class="fas fa-bars"></i>
+              <span>همه دسته بندی ها</span>
+            </a>
 
-        <!-- START SEE ADS CATEGORY -->
-        <div id="news_statements" class="swiper mySwiper">
-          <!-- START NEWS TITLE -->
-          <div id="news_title">
+            <div id="mega_menu">
+              <div id="mega_menu_upper">
+                <div class="buttons_frame">
+                  <button type="button">
+                    <a href="#">
+                      <i class="fa-regular fa-boxes-stacked"></i>
+                      <h6>محصولات</h6>
+                    </a>
+                  </button>
 
-            <img src="./Assets/Pictures/Blue Vector Right.png" alt="VECTOR RIGHT">
-            <h4>اخبار و مقالات</h4>
-            <img src="./Assets/Pictures/Blue Vector Left.png" alt="VECTOR LEFT">
+                  <button type="button">
+                    <a href="#">
+                      <i class="fa-regular fa-screwdriver-wrench"></i>
+                      <h6>خدمات</h6>
+                    </a>
+                  </button>
 
-          </div>
-          <!-- END NEWS TITLE -->
+                  <button type="button">
+                    <a href="#">
+                      <i class="fa-regular fa-file-lines"></i>
+                      <h6>استخدام</h6>
+                    </a>
+                  </button>
 
-          <!-- START NEWS BODY -->
-          <div id="news_body" class="swiper-wrapper">
-
-            <div class="news_cards swiper-slide">
-
-              <div class="news_cards_imgholder">
-                <img src="./Assets/Pictures/News/Strock day.jfif" alt="Strock Day">
+                  <button type="button">
+                    <a href="#">
+                      <i class="fa-solid fa-list-ul"></i>
+                      <h6>متفرقه</h6>
+                    </a>
+                  </button>
+                </div>
               </div>
 
-              <h6>روز جهانی استروک</h6>
+              <hr />
 
-              <textarea name="news_cards_content" style="border: none;" readonly>
+              <div id="mega_menu_down">
+                <ul class="inside_menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کالاهای صنعتی و شیمیایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-leaf"></i>
+                      <span>کشاورزی و مواد غذایی</span>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="hovered_menu">
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                  <div class="hovered_menu_items">
+                    <i class="fa-solid fa-wheat"></i>
+                    <span>غلات</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul id="main_menu">
+            <li>
+              <a href="#">
+                <span>صفحه اصلی</span>
+              </a>
+            </li>
+
+            <li>
+              
+              <a href="#">
+                <span>درباره ما</span>
+                <i class="fa-regular fa-chevron-down"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>ارتباط با ما</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>اخبار و مقالات</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+            </li>
+          </ul>
+
+          <button type="button" class="create_adv_button">
+            <a href="#">
+              <i class="fa-solid fa-plus"></i>
+              <span>ثبت آگهی رایگان</span>
+            </a>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+
+      <!-- START ABOUT US -->
+      <div id="aboutus">
+        <div id="aboutus_texts">
+          <h1>
+            بی‌تو‌بی‌آزاد،
+            <span>مسیر سریع تجارت</span>
+          </h1>
+          <h2>
+            بدون واسطه، سریع و مطمئن آگهی بده و<br />
+            معامله کن.
+          </h2>
+          <h3>
+            صادرکننده‌ای؟ واردکننده؟ شرکت حمل‌ونقل یا تامین‌کننده؟<br />
+            اینجا همه به هم می‌رسن.
+          </h3>
+          <h4>تجارت از تأمین تا تحویل، همه‌چیز تو یه جا.</h4>
+
+          <div id="aboutus_under_texts">
+            <h4>همین حالا آگهی تو ثبت کن!</h4>
+            <button type="button" class="create_adv_button">
+              <a href="#">
+                <i class="fa-solid fa-plus"></i>
+                <span>ثبت آگهی</span>
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div id="aboutus_pic">
+          <div id="aboutus_pic_frame">
+            <img src="./assets/images/about-us-poster.jpg" alt="ABOUT US" />
+            <div id="aboutus_pic_borderframe"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END ABOUT US -->
+
+      <br /><br /> <!-- JUST FOR SPACE -->
+
+      <!-- START SPECIAL ADS -->
+      <div id="special_ads" class="swiper mySwiper">
+        <div class="div_titles special_ads">
+          <img src="./assets/images/orange-vector-left.png" alt="VECTOR LEFT" />
+          <h6>آگهی های ویژه</h6>
+          <img src="./assets/images/orange-vector-right.png" alt="VECTOR RIGHT" />
+        </div>
+
+        <div id="special_products" class="swiper-wrapper">
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./assets/images/product-1.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./assets/images/in-offer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./assets/images/product-2.jpg" alt="PRODUCT 2 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره دو</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./assets/images/in-offer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./Assets/Pictures/Products/Product 3.jpg" alt="PRODUCT 3 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره سه</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./Assets/Pictures/Products/Product 4.jpg" alt="PRODUCT 4 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره چهار</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./Assets/Pictures/Products/FaceWash.jfif" alt="PRODUCT 6 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame ">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره پنج</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="spec_product swiper-slide">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame">
+                  <img src="./Assets/Pictures/Products/Iphone16.jfif" alt="PRODUCT 7 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره پنج</h4>
+                </div>
+
+                <div class="product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                  <div class="inoffer_frame">
+                    <img src="./Assets/Pictures/InOffer.png" alt="IN OFFER" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+      </div>
+      <!-- END SPECIAL ADS -->
+
+      <br /><br /> <!-- JUST FOR SPACE -->
+
+      <!-- START SEE ADS CATEGORY -->
+      <div id="see_ads_category">
+        <!-- START TITLE -->
+        <div class="div_titles see_ads_category_title">
+          <img src="./assets/images/blue-vector-left.png" alt="BLUE VECTOR RIGHT" />
+          <h6>دیدن آگهی بر اساس دسته بندی</h6>
+          <img src="./assets/images/blue-vector-left.png" alt="BLUE VECTOR LEFT" />
+        </div>
+        <!-- END TITLE -->
+
+        <!-- START CATEGORIES -->
+        <div id="ads_category">
+          <div class="category">
+            <a href="#">
+              <div class="category_pic">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <h6>محصولات</h6>
+            </a>
+          </div>
+
+          <div class="category">
+            <a href="#">
+              <div class="category_pic">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h6>خدمات</h6>
+            </a>
+          </div>
+
+          <div class="category">
+            <a href="#">
+              <div class="category_pic">
+                <i class="fa-regular fa-file-lines"></i>
+              </div>
+              <h6>استخدام</h6>
+            </a>
+          </div>
+
+          <div class="category">
+            <a href="#">
+              <div class="category_pic">
+                <i class="fa-solid fa-list-ul"></i>
+              </div>
+
+              <h6>متفرقه</h6>
+            </a>
+          </div>
+        </div>
+        <!-- END CATEGORIES -->
+
+      </div>
+      <!-- END SEE ADS CATEGORY -->
+
+      <br /><br /> <!-- JUST FOR SPACE -->
+
+      <!-- START TRANSPORTATION -->
+      <div id="transportation">
+
+        <!-- START TRANSPORTATION CONTENT -->
+        <div class="transportation_content">
+
+          <h4>
+            آگهی حمل و نقلت رو همین جا<br />
+            ثبت کن!
+          </h4>
+
+          <button type="button" class="create_adv_button">
+
+            <a href="#">
+
+              <i class="fa-solid fa-plus"></i>
+              <span>ثبت آگهی رایگان</span>
+
+            </a>
+
+          </button>
+
+        </div>
+        <!-- END TRANSPORTATION CONTENT -->
+
+      </div>
+      <!-- END TRANSPORTATION -->
+
+      <br /><br /> <!-- JUST FOR SPACE -->
+
+      <!-- START ALL ADS -->
+      <div id="all_ads">
+
+        <!-- START HEADER OF ALL ADS -->
+        <div id="all_ads_header">
+
+          <img src="./Assets/Pictures/Blue Vector Right.png" alt="Blue Vector Right">
+          <h4 class="">همه آگهی ها</h4>
+          <img src="./Assets/Pictures/Blue Vector Left.png" alt="Blue Vector Left">
+
+        </div>
+        <!-- END HEADER OF ALL ADS -->
+
+        <!-- START MAIN OF ALL ADS -->
+        <div id="all_ads_main">
+
+          <!-- ROW 1 -->
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 1.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 2.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 3.png" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 4.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 5.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 6.png" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 7.png" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 8.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ROW 3 -->
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 9.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 10.png" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Product 11.jpg" alt="PRODUCT 1 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="spec_product all_ads_products">
+
+            <div class="base_product">
+
+              <div class="product_pic_holder">
+                <div class="product_pic_frame all_ads_product_pic_frame">
+                  <img src="./Assets/Pictures/All Ads/Iphone16.jfif" alt="PRODUCT 12 PICTURE" />
+                </div>
+
+                <div class="add_to_fav_frame">
+                  <i class="add_to_fav fa-regular fa-heart"></i>
+                </div>
+
+              </div>
+
+              <div class="product_texts_frame">
+
+                <div class="product_name">
+                  <h4>محصول شماره یک</h4>
+                </div>
+
+                <div class="product_properties all_ads_product_properties">
+                  <div class="product_price">
+                    <span>1,234,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- END MAIN OF ALL ADS -->
+
+        <!-- START FOOTER OF ALL ADS -->
+        <div id="all_ads_footer">
+
+          <button type="button">
+            <span>مشاهده همه</span>
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+        </div>
+        <!-- END FOOTER OF ALL ADS -->
+
+      </div>
+      <!-- END ALL ADS -->
+
+      <br /><br /> <!-- JUST FOR SPACE -->
+
+      <!-- START SEE ADS CATEGORY -->
+      <div id="news_statements" class="swiper mySwiper">
+        <!-- START NEWS TITLE -->
+        <div id="news_title">
+
+          <img src="./Assets/Pictures/Blue Vector Right.png" alt="VECTOR RIGHT">
+          <h4>اخبار و مقالات</h4>
+          <img src="./Assets/Pictures/Blue Vector Left.png" alt="VECTOR LEFT">
+
+        </div>
+        <!-- END NEWS TITLE -->
+
+        <!-- START NEWS BODY -->
+        <div id="news_body" class="swiper-wrapper">
+
+          <div class="news_cards swiper-slide">
+
+            <div class="news_cards_imgholder">
+              <img src="./Assets/Pictures/News/Strock day.jfif" alt="Strock Day">
+            </div>
+
+            <h6>روز جهانی استروک</h6>
+
+            <textarea name="news_cards_content" style="border: none;" readonly>
 🧠 هماهنگی با تیم مدیریتی بیمارستان
 
 🧠 تدوین سه پمفلت خودمراقبتی و توزیع بین
@@ -1296,24 +1223,24 @@
 🧠 کنترل فشار و وزن همراهان 
               </textarea>
 
-              <div class="news_cards_btn">
-                <button type="button">
-                  <span>مشاهده همه اخبار</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
+            <div class="news_cards_btn">
+              <button type="button">
+                <span>مشاهده همه اخبار</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
             </div>
 
-            <div class="news_cards swiper-slide">
+          </div>
 
-              <div class="news_cards_imgholder">
-                <img src="./Assets/Pictures/News/news.jpg" alt="NEWS">
-              </div>
+          <div class="news_cards swiper-slide">
 
-              <h6>اخبار جدید خارجه</h6>
+            <div class="news_cards_imgholder">
+              <img src="./Assets/Pictures/News/news.jpg" alt="NEWS">
+            </div>
 
-              <textarea name="news_cards_content" style="border: none;" dir="ltr" readonly>
+            <h6>اخبار جدید خارجه</h6>
+
+            <textarea name="news_cards_content" style="border: none;" dir="ltr" readonly>
 The climate crisis may be posing an existential
 threat to many species of shark. A new study has
 revealed that the acidification of the world's oceans
@@ -1328,24 +1255,24 @@ ventilate their gills and have constant seawater
 exposure might also be vulnerable". He concluded
               </textarea>
 
-              <div class="news_cards_btn">
-                <button type="button">
-                  <span>مشاهده همه اخبار</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
+            <div class="news_cards_btn">
+              <button type="button">
+                <span>مشاهده همه اخبار</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
             </div>
 
-            <div class="news_cards swiper-slide">
+          </div>
 
-              <div class="news_cards_imgholder">
-                <img src="./Assets/Pictures/News/B2B.webp" alt="B2B">
-              </div>
+          <div class="news_cards swiper-slide">
 
-              <h6>بازاریابی B2B چیست؟</h6>
+            <div class="news_cards_imgholder">
+              <img src="./Assets/Pictures/News/B2B.webp" alt="B2B">
+            </div>
 
-              <textarea name="news_cards_content" style="border: none;" readonly>
+            <h6>بازاریابی B2B چیست؟</h6>
+
+            <textarea name="news_cards_content" style="border: none;" readonly>
 اصطلاح B2B مخفف Business to Business به معنای “تجارت بین دو یا چند کسب‌وکار” است. در این نوع تجارت،
 کالاها یا خدمات بین شرکت‌ها به جای مصرف‌کنندگان نهایی مبادله می‌شوند.
 به‌عبارت‌دیگر، مشتری در این مدل یک شخص حقیقی نیست،
@@ -1359,24 +1286,24 @@ exposure might also be vulnerable". He concluded
 و فرآیند تصمیم‌گیری در آن‌ها پیچیده‌تر و تخصصی‌تر است.
               </textarea>
 
-              <div class="news_cards_btn">
-                <button type="button">
-                  <span>مشاهده همه اخبار</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
+            <div class="news_cards_btn">
+              <button type="button">
+                <span>مشاهده همه اخبار</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
             </div>
 
-            <div class="news_cards swiper-slide">
+          </div>
 
-              <div class="news_cards_imgholder">
-                <img src="./Assets/Pictures/News/Iran News.jfif" alt="IRAN NEWS">
-              </div>
+          <div class="news_cards swiper-slide">
 
-              <h6>اخبار فوری ایران</h6>
+            <div class="news_cards_imgholder">
+              <img src="./Assets/Pictures/News/Iran News.jfif" alt="IRAN NEWS">
+            </div>
 
-              <textarea name="news_cards_content" style="border: none;" readonly>
+            <h6>اخبار فوری ایران</h6>
+
+            <textarea name="news_cards_content" style="border: none;" readonly>
 به گزارش همشهری آنلاین به نقل از ایسنا، «انور الانونی» سخنگوی امور خارجی کمیسیون اروپا شامگاه سه‌شنبه در یک نشست خبری با حمایت از تصمیم سه کشور اروپایی برای کلید زدن فرآیند فعال‌سازی مکانیزم ماشه ادعا کرد: «توپ در زمین تهران است و کایا کالاس، نماینده عالی اتحادیه اروپا تمام تلاش خود را برای یافتن و تسهیل یک راه‌حل مذاکره‌شده انجام خواهد داد، چراکه تنها یک راه‌حل دیپلماتیک می‌تواند به موضوع هسته‌ای ایران پاسخ دهد.»
 
 طبق گزارش «اسپوتنیک» وی مدعی شد: «طرف‌های مذاکره ۳۰ روز فرصت دارند تا پیش از آغاز بازگشت تحریم‌های شورای امنیت، به توافقی دست یابند.»
@@ -1384,24 +1311,24 @@ exposure might also be vulnerable". He concluded
 این اظهارات در حالی مطرح می‌شود که مقامات ایرانی با تأکید روی پایبندی ایران به دیپلماسی تصریح کردند که اقدام کشورهای اروپایی برای فعال‌سازی سازوکار بازگشت تحریم‌ها (مکانیسم ماشه) تنها شرایط را پیچیده‌تر خواهد کرد.
               </textarea>
 
-              <div class="news_cards_btn">
-                <button type="button">
-                  <span>مشاهده همه اخبار</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
+            <div class="news_cards_btn">
+              <button type="button">
+                <span>مشاهده همه اخبار</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
             </div>
 
-            <div class="news_cards swiper-slide">
+          </div>
 
-              <div class="news_cards_imgholder">
-                <img src="./Assets/Pictures/News/City.jpg" alt="CITY">
-              </div>
+          <div class="news_cards swiper-slide">
 
-              <h6>قانون جدید جواز ساخت</h6>
+            <div class="news_cards_imgholder">
+              <img src="./Assets/Pictures/News/City.jpg" alt="CITY">
+            </div>
 
-              <textarea name="news_cards_content" style="border: none;" readonly>
+            <h6>قانون جدید جواز ساخت</h6>
+
+            <textarea name="news_cards_content" style="border: none;" readonly>
 افرادی که قصد احداث ساختمان در مناطق شهری یا روستایی را دارند،
 بایستی با رعایت شرایط و قوانینی که برای ساخت و ساز در آن منطقه وجود دارد،
 اقدام به ساخت بنا کنند.
@@ -1409,164 +1336,165 @@ exposure might also be vulnerable". He concluded
 جواز ساخت بپردازیم؛ برای اطلاع بیشتر تا انتها با ما همراه شوید.
               </textarea>
 
-              <div class="news_cards_btn">
-                <button type="button">
-                  <span>مشاهده همه اخبار</span>
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-              </div>
-
+            <div class="news_cards_btn">
+              <button type="button">
+                <span>مشاهده همه اخبار</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
             </div>
 
           </div>
-          <!-- END NEWS BODY -->
-
-          <div class="swiper-button-prev">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
 
         </div>
-        <!-- END SEE ADS CATEGORY -->
+        <!-- END NEWS BODY -->
+
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
 
       </div>
-    </main>
+      <!-- END SEE ADS CATEGORY -->
 
-    <br/><br/> <!-- JUST FOR SPACE -->
+    </div>
+  </main>
 
-    <footer>
+  <br /><br /> <!-- JUST FOR SPACE -->
 
-      <div class="container footer_container">
+  <footer>
 
-        <div class="footer_upper">
+    <div class="container footer_container">
 
-          <div class="footer_up_boxes footer_aboutus">
+      <div class="footer_upper">
 
-            <div class="footer_boxes_title">
+        <div class="footer_up_boxes footer_aboutus">
 
-              <i class="fa-solid fa-message-question"></i>
-              <h6>درباره ما</h6>
+          <div class="footer_boxes_title">
 
-            </div>  
-
-            <ul class="footer_boxes_list">
-
-              <li>
-                <a href="#">میلیون ها پیشنهاد تجاری</a>
-              </li>
-              <li>
-                <a href="#">تبلیغات رایگان</a>
-              </li>
-              <li>
-                <a href="#">تبلیغات رایگان</a>
-              </li>
-              <li>
-                <a href="#">تبلیغات رایگان</a>
-              </li>
-              <li>
-                <a href="#">تبلیغات رایگان</a>
-              </li>
-
-            </ul>
+            <i class="fa-solid fa-message-question"></i>
+            <h6>درباره ما</h6>
 
           </div>
 
-          <div class="footer_up_boxes footer_fast_access">
+          <ul class="footer_boxes_list">
 
-            <div class="footer_boxes_title">
+            <li>
+              <a href="#">میلیون ها پیشنهاد تجاری</a>
+            </li>
+            <li>
+              <a href="#">تبلیغات رایگان</a>
+            </li>
+            <li>
+              <a href="#">تبلیغات رایگان</a>
+            </li>
+            <li>
+              <a href="#">تبلیغات رایگان</a>
+            </li>
+            <li>
+              <a href="#">تبلیغات رایگان</a>
+            </li>
 
-              <i class="fa-solid fa-calendar-lines"></i>
-              <h6>دسترسی سریع</h6>
-
-            </div>  
-
-            <ul class="footer_boxes_list">
-
-              <li>
-                <a href="#">دسته بندی محصولات</a>
-              </li>
-              <li>
-                <a href="#">اخبار و مقالات</a>
-              </li>
-              <li>
-                <a href="#">درباره ما</a>
-              </li>
-              <li>
-                <a href="#">تولید کنندگان</a>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div class="footer_up_boxes footer_call_info">
-            
-            <h6>اطلاعات تماس</h6>
-
-            <div class="footer_call_info_boxes footer_phone_number_box">
-
-              <div class="call_info_boxes_text">
-                <span>شماره تماس :</span>
-                <i class="fa-solid fa-phone-volume"></i>
-              </div>
-              
-              <span>42445555(013)</span>
-
-            </div>
-
-            <div class="footer_call_info_boxes">
-
-              <div class="call_info_boxes_text">
-                <span>ايميل :</span>
-                <i class="fa-solid fa-envelopes"></i>
-              </div>
-              
-              <span>ali.yahyavi.azad.la@gmail.com</span>
-
-            </div>
-            
-            <div class="footer_call_info_boxes footer_call_info_boxes3">
-
-              <div class="call_info_boxes_text">
-                <span>آدرس :</span>
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              
-              <span>گيلان - لاهيجان - ميدان شيخ زاهد</span>
-
-            </div>
-
-          </div>
+          </ul>
 
         </div>
-      
-        <div class="footer_downer">
 
-          <div class="footer_logo_frame">
-            <img src="./Assets/Pictures/White Logo.png" alt="B2B LOGO">
+        <div class="footer_up_boxes footer_fast_access">
+
+          <div class="footer_boxes_title">
+
+            <i class="fa-solid fa-calendar-lines"></i>
+            <h6>دسترسی سریع</h6>
+
           </div>
-          
-          <div class="footer_social_frame">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-linkedin"></i>
+
+          <ul class="footer_boxes_list">
+
+            <li>
+              <a href="#">دسته بندی محصولات</a>
+            </li>
+            <li>
+              <a href="#">اخبار و مقالات</a>
+            </li>
+            <li>
+              <a href="#">درباره ما</a>
+            </li>
+            <li>
+              <a href="#">تولید کنندگان</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer_up_boxes footer_call_info">
+
+          <h6>اطلاعات تماس</h6>
+
+          <div class="footer_call_info_boxes footer_phone_number_box">
+
+            <div class="call_info_boxes_text">
+              <span>شماره تماس :</span>
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+
+            <span>42445555(013)</span>
+
           </div>
-          
-          <div class="footer_enamad_frame">
-            <img src="./Assets/Pictures/Enamad.png" alt="Enamad LOGO">
+
+          <div class="footer_call_info_boxes">
+
+            <div class="call_info_boxes_text">
+              <span>ايميل :</span>
+              <i class="fa-solid fa-envelopes"></i>
+            </div>
+
+            <span>ali.yahyavi.azad.la@gmail.com</span>
+
+          </div>
+
+          <div class="footer_call_info_boxes footer_call_info_boxes3">
+
+            <div class="call_info_boxes_text">
+              <span>آدرس :</span>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <span>گيلان - لاهيجان - ميدان شيخ زاهد</span>
+
           </div>
 
         </div>
 
       </div>
 
-    </footer>
-    
-    <br /><br />  <!-- JUST FOR SPACE -->
+      <div class="footer_downer">
 
-    <!-- SCRIPT'S -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
+        <div class="footer_logo_frame">
+          <img src="./Assets/Pictures/White Logo.png" alt="B2B LOGO">
+        </div>
+
+        <div class="footer_social_frame">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+        <div class="footer_enamad_frame">
+          <img src="./Assets/Pictures/Enamad.png" alt="Enamad LOGO">
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <br /><br /> <!-- JUST FOR SPACE -->
+
+  <!-- SCRIPT'S -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
 
 

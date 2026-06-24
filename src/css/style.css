@@ -367,9 +367,10 @@ input::-webkit-search-cancel-button {
 #header_container {
     position: fixed;
     z-index: 10000;
-    width: 1260px;
+    width: 82.7%;
     height: 115.4852066040039px;
     opacity: 1;
+    top: 0;
 }
 
 
@@ -379,7 +380,7 @@ input::-webkit-search-cancel-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 16px 0 16px;
     background-image: linear-gradient(to left,#FFFFFF ,#E0F2F1);
 }
 
