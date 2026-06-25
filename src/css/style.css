@@ -8,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #E0F2F1;
 }
@@ -535,7 +536,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 0px;
-    width: 100%;
+    width: 100.2%;
     height: 55px;
     padding: 0 16px;
     border-radius: 0 0 8px 8px;
@@ -585,7 +586,7 @@ nav {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     margin-left: 20px;
 }
 
@@ -1610,11 +1611,10 @@ main {
 .footer_container {
     width: 90%;
     height: 517px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 15px;
     padding: 3rem 4rem 0 4rem;
     opacity: 1;
-    background-color: #03045E;
+    background-color: #d64304;
     color: #FFFFFF;
 }
 
@@ -1780,7 +1780,7 @@ main {
 }
 
 .footer_enamad_frame {
-    width: 100px;
+    width: 150px;
     height: 100px;
     opacity: 1;
 }

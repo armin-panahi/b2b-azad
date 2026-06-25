@@ -1,6 +1,12 @@
 /* LARGE DEVICES */
-@media screen and (max-width:1060px){
+@media screen and (max-width:1000px){
     #all_category>a>span{
         visibility: hidden;
     }
+}
+@media screen and (max-width:900px){
+    #aboutus_pic_borderframe{
+        visibility: hidden;
+    }
+
 }
