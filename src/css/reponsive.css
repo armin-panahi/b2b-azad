@@ -1,12 +1,36 @@
 /* LARGE DEVICES */
-@media screen and (max-width:1000px){
-    #all_category>a>span{
+@media screen and (max-width:1000px) {
+    #all_category>a>span {
         visibility: hidden;
     }
 }
-@media screen and (max-width:900px){
-    #aboutus_pic_borderframe{
+
+@media screen and (max-width:900px) {
+    #aboutus_pic_borderframe {
         visibility: hidden;
     }
+    .create_adv_button{
+        width: 10rem;
+    }
+    #search_input{
+        width: 50%;
 
+    }
+    #search_frame > button{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:800px){
+    html{
+        font-size: 14px;
+    }
+    #aboutus_texts>h1{
+        font-size: 34px;
+    }
+    #aboutus_texts>h2{
+        font-size: 34px;
+    }
+    
 }
