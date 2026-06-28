@@ -18,7 +18,7 @@ button,input {
 }
 
 .create_adv_button {
-    width: 13rem;
+    width: 10rem;
     height: 38.79999923706055px;
     border-radius: 8px;
     border: none;
@@ -815,7 +815,7 @@ main {
 #aboutus {
     width: 97.5%;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     padding: 8px 16px;
     border-radius: 8px;
@@ -841,7 +841,7 @@ main {
     text-align: right;
     vertical-align: middle;
     color: #03045E;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 #aboutus_texts > h1 > span {
@@ -853,7 +853,7 @@ main {
     font-family: IRANSansWeb;
     font-weight: 900;
     font-size: 2.5rem;
-    line-height: 130%;
+    line-height: 170%;
     letter-spacing: 0%;
     text-align: right;
     vertical-align: middle;
@@ -911,10 +911,11 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 #aboutus_pic_frame {
+    padding-top: 80px;
     position: relative;
     width: 370px;
     height: 430.6499938964844px;
@@ -971,7 +972,7 @@ main {
     display: flex;
     justify-content: center;
     width: 288px;
-    height: 426px;
+    min-height: 426px;
     opacity: 1;
     border-radius: 32px;
     background-color: #FFFFFF;
@@ -980,11 +981,11 @@ main {
 .base_product {
     display: flex;
     flex-direction: column;
-    width: 288px; 
-    max-height: 426px;
+    width: 100%; 
+    max-height: 100%;
     border-radius: 32px;
     opacity: 1;
-    gap: 20px;
+    gap: 40px;
     padding: 10px 5px;
     background-color: #FFFFFF;
     box-shadow: 0px 60px 100px 0px #48484829;
@@ -1249,7 +1250,7 @@ main {
 }
 
 .category {
-    width: 185px;
+    width: 100%;
     opacity: 1;
     display: flex;
     flex-direction: column;
