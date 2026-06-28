@@ -68,11 +68,15 @@
     .category > a > h6{
         font-size: 1.5rem;
     }
-    
     .spec_product{
         width: 250px;
         height: 380px;
     }
+    .product_pic_frame{
+        width: 230px;
+        height: 256px;
+    }
+
 }
 
 /* @media screen and (max-width:){
