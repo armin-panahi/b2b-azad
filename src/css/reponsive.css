@@ -127,5 +127,7 @@
     .create_adv_button {
         min-width: 120px;
     }
-
+    h6{
+        font-size: 15px;
+    }
 }
