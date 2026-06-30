@@ -3,29 +3,54 @@
     #all_category>a>span {
         visibility: hidden;
     }
+    .footer_container{
+        height: 800px;
+    }
+    .footer_upper_responsive {
+        row-gap: 30px;
+        column-gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        justify-content: center;
+    }
+
+    .footer_call_info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2 span;
+    }
 }
+
 /* Tablet or ipad */
 @media screen and (max-width:900px) {
     #aboutus_pic {
         display: none;
     }
-    #aboutus{
+
+    #aboutus {
         justify-content: center;
     }
-    #aboutus_texts{
+
+    #aboutus_texts {
         width: 100%;
         align-items: center;
         padding-right: 45px;
     }
-    #aboutus_under_texts{
+
+    #aboutus_under_texts {
         align-items: center;
     }
-    #aboutus_texts > h2{
+
+    #aboutus_texts>h2 {
         text-align: center;
     }
-    #aboutus_texts > h3{
+
+    #aboutus_texts>h3 {
         text-align: center;
     }
+
     .create_adv_button {
         width: 10rem;
     }
@@ -40,6 +65,7 @@
     }
 
 }
+
 /* tablet  */
 @media screen and (max-width:800px) {
     html {
@@ -58,40 +84,48 @@
         width: 300px;
         height: 360px;
     }
-    .category_pic{
+
+    .category_pic {
         width: 100px;
         height: 100px;
     }
-    .category_pic > i {
+
+    .category_pic>i {
         font-size: 2.7rem;
     }
-    .category > a > h6{
+
+    .category>a>h6 {
         font-size: 1.5rem;
     }
-    .spec_product{
+
+    .spec_product {
         width: 250px;
         height: 380px;
     }
-    .product_pic_frame{
+
+    .product_pic_frame {
         width: 230px;
         height: 256px;
     }
-    
 
+    .footer_container {
+        padding: 3rem 40px 0 40px;
+    }
 }
 
-@media screen and (max-width:700px){
-    #main_menu{
+@media screen and (max-width:700px) {
+    #main_menu {
         gap: 10px;
         justify-content: space-around;
 
     }
-    #registerandlogin_button{
+
+    #registerandlogin_button {
         width: 120px;
     }
-    .create_adv_button{
+
+    .create_adv_button {
         min-width: 120px;
     }
-
 
 }
