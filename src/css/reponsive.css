@@ -3,9 +3,11 @@
     #all_category>a>span {
         display: none;
     }
-    .footer_container{
+
+    .footer_container {
         height: 800px;
     }
+
     .footer_upper_responsive {
         row-gap: 30px;
         column-gap: 50px;
@@ -36,11 +38,13 @@
     #aboutus_texts {
         width: 100%;
         align-items: center;
-        padding-right: 30px;
     }
 
     #aboutus_under_texts {
         align-items: center;
+    }
+    #aboutus_texts>h1{
+        text-align: center;
     }
 
     #aboutus_texts>h2 {
@@ -50,7 +54,8 @@
     #aboutus_texts>h3 {
         text-align: center;
     }
-    #aboutus_texts>h4{
+
+    #aboutus_texts>h4 {
         text-align: center;
     }
 
@@ -130,59 +135,105 @@
     .create_adv_button {
         min-width: 120px;
     }
-    h6{
+
+    h6 {
         font-size: 15px;
     }
 }
 
 /* mobile */
-@media screen and (max-width:660px){
-    .container{
+@media screen and (max-width:660px) {
+    .container {
         width: 100%;
         padding: 2px;
     }
-    #header_container{
-        width: 98.7%;
+
+    #header_container {
+        width: 98.7%;;
     }
-    #header_up{
-        height: 100px;
+
+    #header_up {
         position: relative;
+        height: 90px;
         align-items: end;
         padding-bottom: .7px;
     }
-    #header_logo{
-        position: fixed;
-        right: 35%;
+
+    #header_logo {
+        position: absolute;
+        right: 40%;
         top: -15px;
     }
+
     #header_logo>a>img {
-        width: 113px;
-        height: 80px;
+        width: 103px;
+        height: 70px;
     }
-    .all_category>a{
+
+    .all_category>a {
         width: 100%;
     }
-    #aboutus{
+
+    #aboutus {
         width: 100%;
     }
-    #main_menu{
+
+    #main_menu {
         width: 100%;
         margin-left: 0;
     }
-    #search_frame{
-        width: 71%;
-    } 
-    #registerandlogin_button{
-        width: 29%;
+
+    #search_frame {
+        width: 66.66%;
+        border-left: none;
+        border-radius: 0 8px 8px 0px;
     }
-    header .create_adv_button{
+    #search_input{
+        width: 45%;
+    }
+    #search_frame>button {
+        width: 55%;
+    }
+
+    #registerandlogin_button {
+        width: 33.33%;
+        height: 42px;
+        border: 2px solid #03045E;
+        border-right: none;
+        border-radius: 8px 0 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 0;
+        background-color: #f9f9f9;
+    }
+
+    #registerandlogin_button>button {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 8px 0;
+        height: 100%;
+        border-right: 2px solid #03045E;
+        border-radius: 8px 0px 0 8px;
+
+    }
+
+    header .create_adv_button {
         display: none;
     }
-    .category_pic{
+
+    .category_pic {
         width: 60px;
         height: 60px;
     }
-    .category_pic>i{
+
+    .category_pic>i {
         font-size: 1.5rem;
     }
+}
+
+@media screen and (max-width:440px){
+    #header_logo {
+        right: 37%;
+    }   
 }
