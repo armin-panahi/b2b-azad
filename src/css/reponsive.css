@@ -5,13 +5,14 @@
     }
 
     .footer_container {
-        height: 800px;
+        height: 900px;
     }
 
     .footer_upper_responsive {
         row-gap: 30px;
         column-gap: 50px;
         display: grid;
+        padding-top: 20px;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
         justify-content: center;
@@ -43,7 +44,8 @@
     #aboutus_under_texts {
         align-items: center;
     }
-    #aboutus_texts>h1{
+
+    #aboutus_texts>h1 {
         text-align: center;
     }
 
@@ -149,7 +151,9 @@
     }
 
     #header_container {
-        width: 98.7%;;
+        justify-self: center;
+        width: 100%;
+        padding: 0 2px;
     }
 
     #header_up {
@@ -188,9 +192,11 @@
         border-left: none;
         border-radius: 0 8px 8px 0px;
     }
-    #search_input{
+
+    #search_input {
         width: 45%;
     }
+
     #search_frame>button {
         width: 55%;
     }
@@ -230,10 +236,59 @@
     .category_pic>i {
         font-size: 1.5rem;
     }
+
+    .div_titles h6 {
+        font-size: 1.4rem;
+    }
+
+    #all_ads_header>h4 {
+        font-size: 1.4rem;
+    }
+
+    #news_title>h4 {
+        font-size: 1.4rem;
+    }
+
+    .spec_product {
+        width: 180px;
+        height: 330px;
+    }
+
+    .product_pic_frame {
+        height: 170px;
+    }
+
+    #all_ads_main {
+        justify-content: center
+    }
+
+    .news_cards_imgholder {
+        height: 33%;
+    }
+
+    .footer_container {
+        width: 98%;
+        height: 750px;
+        padding: 20px 20px;
+    }
+    .footer_downer{
+        gap: 20px;
+        justify-content: center;
+    }
+    .footer_logo_frame{
+        width: 33.33%;
+    }
+    .footer_social_frame{
+        width: 33.33%;
+        margin-right: 0;
+    }
+    .footer_enamad_frame{
+        width: 33.33%;
+    }
 }
 
-@media screen and (max-width:440px){
+@media screen and (max-width:440px) {
     #header_logo {
         right: 37%;
-    }   
+    }
 }
